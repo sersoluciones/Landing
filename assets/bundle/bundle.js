@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (() => {
 
 
-console.log('from webpack');
+console.log('from webpack!');
 
 
 /***/ })
