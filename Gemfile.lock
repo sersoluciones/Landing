@@ -4,7 +4,6 @@ GIT
   tag: v1.2.7
   specs:
     eventmachine (1.2.7)
-    eventmachine (1.2.7-x64-mingw32)
 
 GEM
   remote: https://rubygems.org/
@@ -295,8 +294,6 @@ PLATFORMS
 DEPENDENCIES
   eventmachine (= 1.2.7)!
   github-pages (~> 223)
-  jekyll-feed (~> 0.12)
-  minima (~> 2.5)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

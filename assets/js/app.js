@@ -28,7 +28,6 @@ var GPTHEME = GPTHEME || {};
 			};
 
 			// Menus
-			this.megaMenu = this.header.find('#mega-menu-wrap');
 			this.mobileMenu = $('[data-mobile-menu-resolution]').data('mobile-menu-resolution');
 
 			this.resize();
@@ -53,7 +52,6 @@ var GPTHEME = GPTHEME || {};
 			GPTHEME.initialize.countUp();
 			GPTHEME.initialize.countDown();
 			GPTHEME.initialize.tab();
-			GPTHEME.initialize.googleMap();
 			GPTHEME.initialize.footer();
 			GPTHEME.initialize.contactFrom();
 		},
@@ -63,6 +61,8 @@ var GPTHEME = GPTHEME || {};
 		/*========================================================*/
 
 		general: function () {
+
+			new WOW().init();
 
 			// Mouse Move Parallax Element
 			var $scene = $('.parallax-element').parallax({
@@ -203,6 +203,7 @@ var GPTHEME = GPTHEME || {};
 		handleMobileHeader: function () {
 			if (Gp.header && Gp.header.length) {
 				if (Gp.isMobileMenu) {
+					Gp.header
 					Gp.header.addClass('mobile-header');
 					Gp.body.addClass('is-mobile-menu');
 					setTimeout(function () {
@@ -642,189 +643,6 @@ var GPTHEME = GPTHEME || {};
 					tabs.parent('.gp-tabs').removeClass('is-ended');
 				}
 			}
-		},
-
-
-		/*=================================*/
-		/*=           Google Map          =*/
-		/*=================================*/
-		googleMap: function () {
-			$('.gmap3-area').each(function () {
-				var $this = $(this),
-					key = $this.data('key'),
-					lat = $this.data('lat'),
-					lng = $this.data('lng'),
-					mrkr = $this.data('mrkr'),
-					address = $this.data('address'),
-					addr = $this.data('addr');
-
-				$this.gmap3({
-					center: [lat, lng],
-					zoom: 14,
-					scrollwheel: false,
-
-					mapTypeId: google.maps.MapTypeId.ROADMAP,
-					styles: [{
-						"featureType": "all",
-						"elementType": "labels.text.fill",
-						"stylers": [{
-							"saturation": 36
-						},
-							{
-								"color": "#000000"
-							},
-							{
-								"lightness": 40
-							}
-						]
-					},
-						{
-							"featureType": "all",
-							"elementType": "labels.text.stroke",
-							"stylers": [{
-								"visibility": "on"
-							},
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 16
-								}
-							]
-						},
-						{
-							"featureType": "all",
-							"elementType": "labels.icon",
-							"stylers": [{
-								"visibility": "off"
-							}]
-						},
-						{
-							"featureType": "administrative",
-							"elementType": "geometry.fill",
-							"stylers": [{
-								"color": "#000000"
-							},
-								{
-									"lightness": 20
-								}
-							]
-						},
-						{
-							"featureType": "administrative",
-							"elementType": "geometry.stroke",
-							"stylers": [{
-								"color": "#000000"
-							},
-								{
-									"lightness": 17
-								},
-								{
-									"weight": 1.2
-								}
-							]
-						},
-						{
-							"featureType": "landscape",
-							"elementType": "geometry",
-							"stylers": [{
-								"color": "#000000"
-							},
-								{
-									"lightness": 20
-								}
-							]
-						},
-						{
-							"featureType": "poi",
-							"elementType": "geometry",
-							"stylers": [{
-								"color": "#000000"
-							},
-								{
-									"lightness": 21
-								}
-							]
-						},
-						{
-							"featureType": "road.highway",
-							"elementType": "geometry.fill",
-							"stylers": [{
-								"color": "#000000"
-							},
-								{
-									"lightness": 17
-								}
-							]
-						},
-						{
-							"featureType": "road.highway",
-							"elementType": "geometry.stroke",
-							"stylers": [{
-								"color": "#000000"
-							},
-								{
-									"lightness": 29
-								},
-								{
-									"weight": 0.2
-								}
-							]
-						},
-						{
-							"featureType": "road.arterial",
-							"elementType": "geometry",
-							"stylers": [{
-								"color": "#000000"
-							},
-								{
-									"lightness": 18
-								}
-							]
-						},
-						{
-							"featureType": "road.local",
-							"elementType": "geometry",
-							"stylers": [{
-								"color": "#000000"
-							},
-								{
-									"lightness": 16
-								}
-							]
-						},
-						{
-							"featureType": "transit",
-							"elementType": "geometry",
-							"stylers": [{
-								"color": "#000000"
-							},
-								{
-									"lightness": 19
-								}
-							]
-						},
-						{
-							"featureType": "water",
-							"elementType": "geometry",
-							"stylers": [{
-								"color": "#000000"
-							},
-								{
-									"lightness": 17
-								}
-							]
-						}
-					]
-				})
-					.marker(function (map) {
-						return {
-							position: map.getCenter(),
-							icon: mrkr,
-						};
-					})
-
-			});
 		},
 
 		/*=============================*/
