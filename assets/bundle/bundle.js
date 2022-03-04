@@ -2,7 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 724:
+/***/ "./_webpack/styles.scss":
+/*!******************************!*\
+  !*** ./_webpack/styles.scss ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -11,7 +14,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 411:
+/***/ "./_webpack/src/app.ts":
+/*!*****************************!*\
+  !*** ./_webpack/src/app.ts ***!
+  \*****************************/
 /***/ (() => {
 
 
@@ -63,11 +69,13 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 var exports = __webpack_exports__;
-var __webpack_unused_export__;
+/*!***************************!*\
+  !*** ./_webpack/index.ts ***!
+  \***************************/
 
-__webpack_unused_export__ = ({ value: true });
-__webpack_require__(724);
-__webpack_require__(411);
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__webpack_require__(/*! ./styles.scss */ "./_webpack/styles.scss");
+__webpack_require__(/*! ./src/app */ "./_webpack/src/app.ts");
 
 })();
 
