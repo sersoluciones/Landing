@@ -468,14 +468,6 @@ var GPTHEME = GPTHEME || {};
 
 		sectionBackground: function () {
 
-			// Section Background Image
-			$('[data-bg-image]').each(function () {
-				var img = $(this).data('bg-image');
-				$(this).css({
-					backgroundImage: 'url(' + img + ')',
-				});
-			});
-
 			//Parallax Background
 			$('[data-parallax="image"]').each(function () {
 
