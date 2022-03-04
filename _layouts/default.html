@@ -22,6 +22,12 @@
     <link rel="stylesheet" href="/assets/css/app.css" type="text/css">
     <link rel="stylesheet" href="/assets/bundle/bundle.min.css" type="text/css">
 
+    {% if jekyll.environment == "production" %}
+    <link rel="stylesheet" href="/assets/bundle/bundle.min.css" type="text/css">
+    {% else %}
+    <link rel="stylesheet" href="/assets/bundle/bundle.css" type="text/css">
+    {% endif %}
+
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800%7CPoppins:300,400,500,600,700,800" rel="stylesheet">
 
   </head>
@@ -51,6 +57,12 @@
     <!-- Site Scripts -->
     <script src="/assets/js/header.js"></script>
     <script src="/assets/js/app.js"></script>
+
+    {% if jekyll.environment == "production" %}
     <script src="/assets/bundle/bundle.min.js"></script>
+    {% else %}
+    <script src="/assets/bundle/bundle.js"></script>
+    {% endif %}
+
   </body>
 </html>
