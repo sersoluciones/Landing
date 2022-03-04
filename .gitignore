@@ -4,4 +4,7 @@ _site
 .jekyll-metadata
 vendor
 node_modules
+assets/bundle/bundle.js
+assets/bundle/bundle.js.map
 assets/bundle/bundle.css
+assets/bundle/bundle.css.map
