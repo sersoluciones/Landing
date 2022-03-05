@@ -62,8 +62,6 @@ var GPTHEME = GPTHEME || {};
 
 		general: function () {
 
-			new WOW().init();
-
 			// Mouse Move Parallax Element
 			var $scene = $('.parallax-element').parallax({
 				scalarX: 100,

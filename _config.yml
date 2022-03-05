@@ -55,3 +55,13 @@ exclude:
   - package.json
   - package-lock.json
   - tsconfig.json
+
+compress_html:
+  clippings: []
+  comments: []
+  endings: []
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
